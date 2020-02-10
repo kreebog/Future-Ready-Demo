@@ -1,0 +1,23 @@
+{
+  "name": "future-ready-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kreebog/Future-Ready-Demo.git"
+  },
+  "author": "James Dean (kreebog@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kreebog/Future-Ready-Demo/issues"
+  },
+  "homepage": "https://github.com/kreebog/Future-Ready-Demo#readme",
+  "dependencies": {
+    "@types/express": "^4.17.2",
+    "express": "^4.17.1"
+  }
+}
