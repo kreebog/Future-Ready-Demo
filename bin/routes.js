@@ -1,9 +1,10 @@
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
@@ -19,10 +20,11 @@ const log = pino_1.default({ prettyPrint: true, useLevelLabels: true, name: `FRI
 log.info(`Logging enabled. LOG_LEVEL is ${log.level.toUpperCase()}`);
 /**
  * Render the home page
+ *
  * @param req - Express Request Object
  * @param res - Express Response Object
  */
-exports.homePage = (req, res) => __awaiter(this, void 0, void 0, function* () {
+exports.homePage = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     log.trace(`${req.url} ->`, 'Valid route, rendering Home Page...');
     let name = 'Mystery School';
     let logo = 'unknown.png';
@@ -38,10 +40,21 @@ exports.homePage = (req, res) => __awaiter(this, void 0, void 0, function* () {
             logo = 'sdhs-logo.png';
             cheer = 'Go Daisies!';
             break;
+        default:
+            name = "Mystery High School";
+            logo = "unknown.png";
+            cheer = "Go... Get a mascot?";
     }
     res.render('pageHome.ejs', { name, logo, cheer });
 });
-exports.sendFile = (req, res) => __awaiter(this, void 0, void 0, function* () {
+/**
+ * Checks for existence of requested file and sends if found.
+ * If not found, will respond with 404.
+ *
+ * @param req
+ * @param res
+ */
+exports.sendFile = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     if (fs_1.default.existsSync(`.${req.url}`)) {
         log.trace(`${req.url} ->`, `Requested file found, sending.`);
         res.status(200).sendFile(path_1.default.resolve(`.${req.url}`));

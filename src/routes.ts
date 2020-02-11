@@ -9,6 +9,7 @@ log.info(`Logging enabled. LOG_LEVEL is ${log.level.toUpperCase()}`);
 
 /**
  * Render the home page
+ * 
  * @param req - Express Request Object
  * @param res - Express Response Object
  */
@@ -28,10 +29,21 @@ export const homePage = async (req: Request, res: Response) => {
       logo = 'sdhs-logo.png';
       cheer = 'Go Daisies!';
       break;
+      default:
+        name = "Mystery High School";
+        logo = "unknown.png";
+        cheer= "Go... Get a mascot?"
   }
   res.render('pageHome.ejs', { name, logo, cheer });
 };
 
+/**
+ * Checks for existence of requested file and sends if found.
+ * If not found, will respond with 404.
+ * 
+ * @param req 
+ * @param res 
+ */
 export const sendFile = async (req: Request, res: Response) => {
   if (fs.existsSync(`.${req.url}`)) {
     log.trace(`${req.url} ->`, `Requested file found, sending.`);

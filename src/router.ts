@@ -11,3 +11,4 @@ router.get('/favicon.ico', routes.sendFile);
 
 // page routes
 router.get('/', routes.homePage);
+
