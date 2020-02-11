@@ -1,7 +1,7 @@
 # Future-Ready-Demo
 *This project is to support a discussion and demonstration of programming languages and web development techniques for Future Ready Institutes of Tennessee*
 
-### About Programming Languages
+## About Programming Languages
 * **Compiled**
   * **Common Languages**
     * Assembly
@@ -50,8 +50,12 @@
     * Presentational (RTF)
     * Procedural (PostScript)
     * Descriptive (HTML, XML)
+* **Transpiled Languages**
+  * TypeScript
+  * CoffeeScript
+  * Dart
     
-### Languages Used in This Project
+## Languages Used By This Project
 * **JavaScript (server-side)**
 * **JavaScript (client-side)**
 * **TypeScript**
@@ -60,7 +64,21 @@
 * **HTML**
 * **CSS**
 * **Markdown**
+* **Windows Batch**
 
+## Tools Used By This Project
+* **Github**
+* **Visual Studio Code (VSCode)**
+* **Node.js (and NPM)**
+* **Express**
+* **EJS**
+* **TypeScript (and TSC)**
+* **SonarQube**
+* **Dotenv**
+* **ESLint**
+* **Prettier**
+* **Pino**
+* **Nodemon**
 
 
 
