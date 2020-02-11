@@ -13,9 +13,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const routes = __importStar(require("./routes"));
 const express_1 = __importDefault(require("express"));
 exports.router = express_1.default.Router();
-// handle image and stylesheet requests
+// file routes (stylesheets, images, scripts)
 exports.router.get('/css/*', routes.sendFile);
-exports.router.get('/images/*', routes.sendFile);
-// pages
+exports.router.get('/img/*', routes.sendFile);
+exports.router.get('/js/*', routes.sendFile);
+exports.router.get('/favicon.ico', routes.sendFile);
+// page routes
 exports.router.get('/', routes.homePage);
 //# sourceMappingURL=router.js.map

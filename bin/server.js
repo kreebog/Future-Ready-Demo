@@ -20,6 +20,8 @@ startServer();
  */
 function startServer() {
     log.debug('startServer() ->', 'Starting express HTTPServer...');
+    // set ejs for content rendering of non-static pages
+    app.set('view engine', 'ejs');
     app.use('/', router_1.router);
     // catch-all for unhandled requests
     app.get('/*', (req, res) => {

@@ -1,6 +1,6 @@
 {
   "name": "future-ready-demo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "./bin/server.js",
   "scripts": {
@@ -24,11 +24,13 @@
   "dependencies": {
     "@types/express": "^4.17.2",
     "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
     "pino": "^5.16.0",
     "pino-pretty": "^3.5.0"
   },
   "devDependencies": {
+    "@types/ejs": "^3.0.0",
     "@types/pino": "^5.15.5",
     "eslint": "^6.8.0"
   }
