@@ -36,8 +36,10 @@
     * Bash
     * ANT
   * **Advantages**
-    * Interpreted
+    * Platform Independent (sometimes)
     * Good for Automation
+  * **Disadvantages**
+    * Platform Dependent (sometimes)
 * **Markup**
   * **Common Languages**
     * HTML
