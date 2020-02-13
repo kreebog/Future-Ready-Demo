@@ -33,17 +33,13 @@ exports.homePage = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         case 'rbhs':
             name = 'Red Bank High School';
             logo = 'rbhs-logo.png';
-            cheer = 'Go Lions!';
+            cheer = 'GooooOOO - big, scary, cat-lookin\' thing!';
             break;
         case 'sdhs':
             name = 'Soddy Daisy High School';
             logo = 'sdhs-logo.png';
-            cheer = 'Go Daisies!';
+            cheer = 'GooooOOO - flowers?';
             break;
-        default:
-            name = "Mystery High School";
-            logo = "unknown.png";
-            cheer = "Go... Get a mascot?";
     }
     res.render('pageHome.ejs', { name, logo, cheer });
 });
