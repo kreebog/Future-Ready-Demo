@@ -2,8 +2,27 @@
   <title>Hello, <%= name %></title>
 </head>
 <body>
-  <h1><%= name %></h1>
-  <img src="img/<%= logo %>">
-  <h2><%= cheer %></h2>
 
+  <div id="display-grid">
+    <div class="schoolName">
+      <%= name %>
+    </div>
+    <div class="schoolLogo">
+      <img src="img/<%= logo %>">
+    </div>
+    <div class="schoolCheer">
+      <%= cheer %>
+    </div>
+  </div>
+  <div id="display-grid">
+    <div class="schoolName">School 2 Name</div>
+    <div class="schoolLogo">School 2 Logo</div>
+    <div class="schoolCheer">School 2 Cheer</div>
+  </div>
+
+  <div id="display-grid">
+    <div class="schoolName">School 3 Name</div>
+    <div class="schoolLogo">School 3 Logo</div>
+    <div class="schoolCheer">School 3 Cheer</div>
+  </div>
  <%- include('footer'); -%>

@@ -1,4 +1,37 @@
 body {
-  font-weight: bold;
-  color: green;
+  background-color: darkslateblue;
+  color: antiquewhite;
+  height: 98vh;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+}
+
+#display-grid {
+  display: grid;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: .5rem;
+}
+
+.schoolName {
+  text-align: center;
+  background-color: darkred;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.schoolLogo {
+  text-align: center;
+  background-color: darkblue;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.schoolCheer {
+  text-align: center;
+  background-color: darkgreen;
+  border-radius: 1rem;
+  padding: 1rem;
 }

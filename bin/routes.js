@@ -26,9 +26,9 @@ log.info(`Logging enabled. LOG_LEVEL is ${log.level.toUpperCase()}`);
  */
 exports.homePage = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     log.trace(`${req.url} ->`, 'Valid route, rendering Home Page...');
-    let name = 'Mystery School';
-    let logo = 'unknown.png';
-    let cheer = 'Go, go, whoever you are!';
+    let name = '';
+    let logo = '';
+    let cheer = '';
     switch (req.query['school']) {
         case 'rbhs':
             name = 'Red Bank High School';
