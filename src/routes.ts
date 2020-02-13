@@ -9,21 +9,23 @@ log.info(`Logging enabled. LOG_LEVEL is ${log.level.toUpperCase()}`);
 
 /**
  * Render the home page
- * 
+ *
  * @param req - Express Request Object
  * @param res - Express Response Object
  */
 export const homePage = async (req: Request, res: Response) => {
   log.trace(`${req.url} ->`, 'Valid route, rendering Home Page...');
-  let name = ''; 
+  let name = '';
   let logo = '';
   let cheer = '';
+
   switch (req.query['school']) {
     case 'rbhs':
       name = 'Red Bank High School';
       logo = 'rbhs-logo.png';
-      cheer = 'GooooOOO - big, scary, cat-lookin\' thing!';
+      cheer = 'We are Red Bank!';
       break;
+
     case 'sdhs':
       name = 'Soddy Daisy High School';
       logo = 'sdhs-logo.png';
@@ -36,9 +38,9 @@ export const homePage = async (req: Request, res: Response) => {
 /**
  * Checks for existence of requested file and sends if found.
  * If not found, will respond with 404.
- * 
- * @param req 
- * @param res 
+ *
+ * @param req
+ * @param res
  */
 export const sendFile = async (req: Request, res: Response) => {
   if (fs.existsSync(`.${req.url}`)) {
